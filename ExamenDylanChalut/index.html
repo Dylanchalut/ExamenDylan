@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recettes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body class="container row">
+    <header>
+        <h4>Répertoire de recettes communautaires</h4>
+    </header>
+    <main>
+        <section class="container-fluid mt-5">
+            <h2>Ajouter une recette</h2>
+            <form onsubmit="ajouter()" class="form-group col-md-6">
+                <div class="col-md-auto">
+                    <label for="nom_recette">Nom de la recette</label>
+                    <input class="form-control col-lg-8" type="text" name="nom_recette" id="nom_recette" required minlength="2" maxlength="20" pattern="[A-Z]{1}[a-z]{2,19}" title="Veuillez commencer par une majuscule et suivis de lettre alphabetique">
+                </div>
+                <label for="ingredients">Ingrédients</label>
+                <div class="input-group">
+                    <input id="ingredients" type="text" class="form-control me-5" placeholder="Ingrédient 1" aria-label="Username" pattern="[A-Z]{1}[a-z]{2,19}" title="Veuillez commencer par une majuscule et suivis de lettre alphabetique" required>
+
+                    <input id="quantite1" type="number" min="0" class="form-control" placeholder="Quantité 1" aria-label="Server" required>
+                </div>
+
+                <div class="input-group">
+                    <input id="ingredients2" type="text" class="form-control me-5" placeholder="Ingrédient 2" aria-label="Username" pattern="[A-Z]{1}[a-z]{2,19}" title="Veuillez commencer par une majuscule et suivis de lettre alphabetique" required>
+
+                    <input id="quantite2" type="number" min="0" class="form-control" placeholder="Quantité 2" aria-label="Server" required>
+                </div>
+
+                <div class="input-group">
+                    <input id="ingredients3" type="text" class="form-control me-5" placeholder="Ingrédient 3" aria-label="Username" pattern="[A-Z]{1}[a-z]{2,19}" title="Veuillez commencer par une majuscule et suivis de lettre alphabetique" >
+
+                    <input id="quantite3" type="number" min="0" class="form-control" placeholder="Quantité 3" aria-label="Server" >
+                </div>
+
+                <div class="input-group">
+                    <input id="ingredients4" type="text" class="form-control me-5" placeholder="Ingrédient 4" aria-label="Username" pattern="[A-Z]{1}[a-z]{2,19}" title="Veuillez commencer par une majuscule et suivis de lettre alphabetique" >
+
+                    <input id="quantite4" type="number" min="0" class="form-control" placeholder="Quantité 4" aria-label="Server" >
+                </div>
+
+                <div class="input-group">
+                    <input id="ingredients5" type="text" class="form-control me-5" placeholder="Ingrédient 5" aria-label="Username" pattern="[A-Z]{1}[a-z]{2,19}" title="Veuillez commencer par une majuscule et suivis de lettre alphabetique" >
+
+                    <input id="quantite5" type="number" min="0" class="form-control" placeholder="Quantité 5" aria-label="Server" >
+                </div>
+
+                <div class="col-md-auto">
+                    <label for="instructions" class="form-label">Example textarea</label>
+                    <textarea id="instructions" class="form-control" rows="3" required></textarea>
+                </div>
+                <p id="Erreur" class="invisible alert-danger">Erreur! Veuillez choisir au moin 2 Ingrédients</p>
+
+                <div class="col-md-4 mt-3">
+                    <button type="submit" id="confirmer" class="btn btn-primary">Aouter la recette</button>
+                </div>
+            </form>
+        </section>
+        <section class="container row">
+            <div class="row-col">
+                <h2>Ajouter une recette</h2>
+                <div class="col" id="recette_maquette">
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+</body>
+</html>
